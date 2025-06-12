@@ -1,0 +1,27 @@
+@import '../../index.css';
+
+.footerSection{
+    padding-block: 5vh;
+    padding-inline: 10vw;
+    background-color: var(--color-bgNavBar);
+    
+}
+
+.contactSection{
+    display: flex;
+    flex-direction: row;
+    gap: 10vw;
+    align-content: start;
+    padding-bottom: 3vh;
+    font-family: "Space Grotesk", sans-serif;
+}
+
+.marginInline{
+    margin-inline: 5px;
+    
+}
+
+.marginTop{
+    margin-top: 10px;
+}
+

@@ -1,0 +1,117 @@
+@import '../../index.css';
+
+.headerPage{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: var(--color-bgNavBar);
+    
+    width: 100%;
+    padding-block: 20px;
+    padding-inline: 40px;
+}
+
+.navBar{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding-block: 10px;
+    align-items: center;
+    z-index: 3;
+    justify-content: space-between;
+    margin-inline: 5vw;
+}
+
+.logo{
+    width: auto;
+    height: auto;
+
+}
+
+.menuItems{
+    display: flex;
+    position: static;
+    flex-direction: row;
+    z-index: 1;
+    gap: 56px;
+    
+}
+
+.hamMenuP{
+    position: static;
+    display: flex;
+}
+
+.hamMenuNormal{
+    width: 40px;
+    display: none;
+    z-index: 10;
+}
+
+.hamMenuPressed{
+    position: absolute;
+    right: 40px;
+}
+
+.textNavBar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 3rem;
+    color: var(--color-textHeaders);
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 800;
+    padding: 4px;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.textNavBar:hover{
+    
+    text-decoration: underline;
+}
+
+@media (max-width: 830px) {
+    .headerPage{
+        padding-bottom: 20px;
+        padding-inline: 5px;
+    }
+    .navBar{
+        margin-inline: 0px;
+        justify-content: space-around;
+    }
+    .logo{
+        margin-left: 0px;
+        width: 60px;
+    }
+    .hamMenuNormal{
+        display: flex ;
+
+    }
+    .menuItems{
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+        background: var(--color-bgNavBar);
+        padding: 12px;
+        position: absolute;
+        top: -0;
+        right: 0;
+        z-index: 1;
+        justify-content: center;
+        align-items: end;
+        padding-left: 10vw;
+        padding-right: 5vw;
+    }
+    .menuItems button{
+        font-size: 2.5rem;
+        padding: auto;
+    }
+
+    .menuHamOpen{
+        display: flex;
+        z-index: 1;
+    }
+    
+}

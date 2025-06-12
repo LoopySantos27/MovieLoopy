@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playwrite+HU:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+.bebas-neue-regular {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@import 'tailwindcss';
+
+:root{
+    /*Page colours*/
+    --color-bg: #000000;
+    --color-bgNavBar:#01BAEF;
+    --color-header:#000000;
+    --color-textHeaders: #000000;
+    --color-text: #EBF4F6;
+    --color-buttons: #1aa4ee;
+    --color-hoverHeaders: #FCBFB7;
+    --color-hover: #167fb8;
+    --responsive: 830px;
+
+    /*Fonts*/
+    --font-roboto:'Roboto';
+}
+
+[data-theme ='light']{
+  --color-primary : #252323;
+  --color-dark: #b3b6c4;
+  --color-bg: #EBF4F6;
+  --color-text: #252323;
+}
+
+@font-face {
+  font-family: 'PlayWrite';
+  src: local('PlayWrite') url(../public/assets/Fonts/Playwrite_HU/PlaywriteHU-VariableFont_wght.ttf)
+  format('ttf');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--color-complementary);
+  width: 100dvw;
+  overflow-x: hidden;
+  height: 100%;
+  background: var(--color-bg);
+  border-color: #5158BB;
+  user-select: none;
+}
+
+canvas {
+  touch-action: none;
+}
+
+
+.screen-max-width {
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  position: relative;
+  max-width: 1120px;
+}
+
+@layer utilities {
+  
+  .primary-background {
+    @reference bg-gray-300
+  }
+
+  .flex-center {
+    @reference flex items-center justify-center
+  }
+
+  .nav-height {
+    @reference h-[calc(100vh-60px)]
+  }
+
+  .btn {
+    @reference px-5 py-2 rounded-3xl bg-[#CE796B] my-10 hover:bg-transparent border border-transparent hover:border hover:text-[#CE796B] hover:border-[#CE796B]
+  }
+
+  .color-container {
+    @reference flex items-center justify-center px-4 py-4 rounded-full bg-gray-300 backdrop-blur
+  }
+
+  .size-btn-container {
+    @reference flex items-center justify-center p-1 rounded-full bg-gray-300 backdrop-blur ml-3 gap-1
+  }
+
+  .size-btn {
+    @reference w-10 h-10 text-sm flex justify-center items-center bg-white text-black rounded-full transition-all
+  }
+
+  .common-padding {
+    @reference sm:py-32 py-20 sm:px-10 px-5
+  }
+
+  .section-heading {
+    @reference text-gray lg:text-5xl md:text-4xl text-3xl lg:mb-0 mb-5 font-medium opacity-0 translate-y-20
+  }
+
+  .feature-text {
+    @reference text-gray max-w-md text-lg md:text-xl font-semibold opacity-0 translate-y-[100px]
+  }
+
+  .feature-text-container {
+    @reference w-full flex-center flex-col md:flex-row mt-10 md:mt-16 gap-5
+  }
+
+  .feature-video {
+    @reference w-full h-full object-cover object-center scale-150 opacity-0
+  }
+
+  .feature-video-container {
+    @reference w-full flex flex-row md:flex-row gap-5 items-center
+  }
+
+  .link {
+    @reference text-blue hover:underline cursor-pointer flex items-center text-xl opacity-0 translate-y-20
+  }
+
+  .control-btn {
+    @reference ml-4 p-4 rounded-full bg-gray-300 backdrop-blur flex-center
+  }
+
+  .hero-title {
+    @reference text-center font-title  font-semibold text-3xl text-[#252323] opacity-0 max-md:mb-10 mt-16 mb-5
+  }
+
+  .hiw-title {
+    @reference text-4xl md:text-7xl font-semibold text-center
+  }
+
+  .hiw-subtitle {
+    @reference text-gray font-semibold text-xl md:text-2xl py-10 text-center
+  }
+
+  .hiw-video {
+    @reference absolute rounded-[56px] overflow-hidden mt-[70px]
+  }
+
+  .hiw-text-container {
+    @reference flex md:flex-row flex-col justify-between items-start gap-24
+  }
+
+  .hiw-text {
+    @reference text-gray text-xl font-normal md:font-semibold
+  }
+
+  .hiw-bigtext {
+    @reference text-white text-3xl md:text-5xl font-bold md:font-semibold mb-8
+  }
+
+  .hiw-list{
+    @reference  rounded-[1vw] pl-4 py-1 w-3/4 lg:w-[60%] hover:text-[#252323]
+                     text-white text-xl font-normal md:font-semibold bg-[#CE796B]
+  }
+
+  .video-carousel_container {
+    @reference relative sm:w-[70vw] w-[88vw] md:h-[70vh] sm:h-[50vh] h-[35vh]
+  }
+
+  .g_fadeIn {
+    @reference opacity-0 translate-y-[100px]
+  }
+}

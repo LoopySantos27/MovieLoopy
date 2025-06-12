@@ -1,0 +1,159 @@
+@import '../../index.css';
+
+.headerList{
+    display: flex;
+    justify-content: space-between;
+    gap: 5vw;
+    padding-inline: 8%;
+    padding-block: 40px;
+    
+    margin-bottom: 10px;
+}
+
+
+
+@media(max-width:963px)
+{
+    .headerList{
+        flex-direction: column;
+        align-items: center;
+        justify-content:space-between;
+        gap: 2vw;
+    }
+    .clasificationList {
+        margin-top: 5px;
+        font-size: 1.5rem !important;
+    }
+    .sortingSection{
+        justify-items: center;
+        text-align: center;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        text-decoration:none !important;
+        background-color: #252323;
+    }
+    .sortingSection:hover{
+        background-color: #788081;
+    }
+    .sortingSection:selection{
+        color: #ff0e0e;
+        background-color: #00bfa5;
+    }
+}
+
+.emojiSection{
+    width: 40px;
+    margin-left: 12px;
+    padding-bottom: 8px;
+}
+
+.clasificationList{
+    display: inline-flex;
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+    font-size: 2rem;
+    font-family: "Space Grotesk", sans-serif;
+    
+}
+
+.clasificationRate{
+    color: var(--color-text);
+    cursor: pointer;
+}
+
+.clasificationRate:hover{
+    text-decoration: underline;
+}
+.clasificationRateSelected:hover{
+    cursor: pointer;
+}
+
+.clasificationRateSelected{
+    color:var(--color-text) ;
+    
+    border-radius: 2px;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.sortingSection{
+    color: #EBF4F6;
+    padding-inline: 5px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-family: "Space Grotesk", sans-serif;
+    background-color: var(--color-buttons) ;
+    border-radius: 5px;
+}
+
+.sortingSection:hover{
+    
+    background-color: var(--color-hover) ;
+}
+
+.sortingSection option{
+    color: black;
+}
+
+.cardsSection{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/*Parte de la pura tarjeta*/
+
+.movieCard{
+    width: 208px;
+    height: 320px;
+    overflow: hidden;
+    color: #fff;
+    position: relative;
+    border-radius: 6px;
+    margin-bottom: 2vh;
+    margin-inline: 1vw;
+    
+}
+
+.movieCard:hover{
+    box-shadow: 0 10px 50px 0 var(--color-hover);
+    
+}
+
+.contentCard{
+    position: absolute;
+    top: 20%;
+    width: 100%;
+    height: 80%;
+    padding: 15px;
+    background-color: #252323;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    opacity: 0;
+    transition-duration: 150ms;
+    transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+}
+
+.contentCard:hover{
+    opacity: 100%;
+}
+
+.contentCard h3{
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    font-family: "Space Grotesk", sans-serif;
+}
+
+.contentCard p{
+    margin-left: 5px;
+    margin-top: 5px;
+    font-family: "Space Grotesk", sans-serif;
+}
+
+.imageMargin{
+    margin-inline: 7px;
+}
