@@ -1,8 +1,9 @@
-import React from 'react'
-
 import './DarkMode.css';
 
 const DarkMode=()=> {
+
+    //Variables para setear el modo dentro del body del documento para referenciar los
+    //Elementos que se tienen que cambiar
     const setDarkTheme = ()=>{
         document.querySelector('body').setAttribute('data-theme', 'dark');
         localStorage.setItem('SelectedTheme', 'dark')
@@ -13,6 +14,7 @@ const DarkMode=()=> {
         localStorage.setItem('selectedTheme', 'light');
     }
 
+    //Aqui agarramos y comparamos el tema seleccionado para setear al como default en la pagina
     const selectedTheme = localStorage.getItem('selectedTheme')
     if(selectedTheme === 'light')
     {

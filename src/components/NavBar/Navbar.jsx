@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { logoIcon,menu, close } from '../../assets'
 import { navBarData } from '../../data/InternalData'
 import styles from './navbar.module.css'
@@ -6,6 +6,7 @@ import DarkMode from '../DarkMode/DarkMode'
 import { Link } from 'react-scroll'
 
 export const Navbar=()=> {
+    //Variable para el menu de hamburguesa responsivo
     const [hamMenu, setHamMenu] = useState(false)
   return (
     
@@ -38,7 +39,6 @@ export const Navbar=()=> {
                                     {index.navTitle}
                             </Link>
 
-                            
                         </button>
                     )
                 )}
@@ -47,10 +47,6 @@ export const Navbar=()=> {
             <DarkMode className='flex absolute right-0' />
             
         </nav>
-
-        
-
-        
     </header>
   )
 }

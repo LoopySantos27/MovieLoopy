@@ -1,5 +1,3 @@
-import { lazy,Suspense } from 'react'
-
 import {Navbar, MovieList,Footer} from './components'
 import { fire, popCorn } from './assets'
 
